@@ -30,6 +30,10 @@ class _NumbersViewState extends State<NumbersView> {
     super.initState();
 
     _audioPlayer.audioCache.prefix = 'assets/sounds/';
+
+    _audioPlayer.audioCache.loadAll(
+        _figures.map((f) => '${f.name}.mp3').toList(),
+    );
   }
 
   @override

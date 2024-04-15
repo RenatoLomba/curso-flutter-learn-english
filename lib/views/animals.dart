@@ -30,6 +30,10 @@ class _AnimalsViewState extends State<AnimalsView> {
     super.initState();
 
     _audioPlayer.audioCache.prefix = 'assets/sounds/';
+
+    _audioPlayer.audioCache.loadAll(
+      _figures.map((f) => '${f.name}.mp3').toList(),
+    );
   }
 
   @override
